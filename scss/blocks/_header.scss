@@ -7,11 +7,12 @@
   transition: margin-bottom .5s ease  ;
   
   @media only screen and (max-width: $tablet) {
-    margin-bottom: 66px;
+    padding: 24px 0;
+    margin-bottom: 76px;
   }
 
-  @media only screen and (max-width: $tablet) {
-    margin-bottom: 10px;
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 30px;
   }
 }
 
