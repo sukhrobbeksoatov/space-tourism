@@ -1,4 +1,9 @@
 /* INDEX BODY */
 .index-body {
   background: url("../images/index-bg.jpg") no-repeat center / cover;
+
+
+  @media only screen and (max-width: $tablet) {
+    background-image: url("../images/index-bg-md.jpg");
+  }
 }

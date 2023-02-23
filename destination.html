@@ -6,7 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destination</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body class="destination-body"></body>
+  <body class="destination-body">
+    <!-- HEADER -->
+    <header class="site-header">
+      <!-- LOGO -->
+      <div class="logo">
+        <a class="logo__link" href="/">
+          <img
+            class="logo__img"
+            src="images/logo.svg"
+            alt="Space Tourism website logo"
+            width="48"
+            height="48"
+          />
+        </a>
+      </div>
+      <!-- /LOGO -->
+
+      <!-- SITENAV -->
+      <nav class="sitenav">
+        <!-- NAV TOGGLER -->
+        <button class="sitenav-toggler" data-nav-toggler>
+          <span class="sitenav-toggler__line"></span>
+          <span class="sitenav-toggler__line"></span>
+          <span class="sitenav-toggler__line"></span>
+        </button>
+        <!-- /NAV TOGGLER -->
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="/">00 HOME</a>
+          </li>
+          <li class="sitenav__item">
+            <a
+              class="sitenav__link sitenav__link--active"
+              href="destination.html"
+              >01 DESTINATION</a
+            >
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="crew.html">02 CREW</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="technology.html">03 TECHNOLOGY</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /SITENAV -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

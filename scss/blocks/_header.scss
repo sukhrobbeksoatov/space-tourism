@@ -4,6 +4,11 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 250px;
+  transition: margin-bottom .5s ease  ;
+  
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 100px;
+  }
 }
 
 /* LOGO */
@@ -22,18 +27,138 @@
 }
 
 /* SITENAV */
-.sitenav {
+.sitenav-toggler {
+  position: fixed;
+  z-index: 101;
+  top: 33px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
+  flex-direction: column;
+  row-gap: 6px;
+  display: none;
+
+  &.opened {
+    
+    .sitenav-toggler__line {
+      &:first-child {
+        position: relative;
+        top: 9px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        position: relative;
+        top: -9px;
+        transform: rotate(-135deg);
+      }
+    }
+
+    @media only screen and (max-width: $mobile) {
+      & + .sitenav__list {
+        right: 0;
+      }
+    }
+  }
+  
+  &__line {
+    width: 24px;
+    height: 3px;
+    background-color: var(--primary-bg-color);
+    transition: transform .5s ease, position .5s ease, opacity .5s ease;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    display: flex;
+  }
 }
+
 .sitenav__list {
   display: flex;
   align-items: center;
   gap: 48px;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40.7742px);
-  padding: 38px 165px 38px 123px;
+  backdrop-filter: blur(40px);
+  padding: 38px 255px 38px 143px;
+  transition: padding .5s ease, gap .5s ease;
+
+  @media only screen and (max-width: $desktop) {
+    padding: 38px 200px 38px 120px;
+    gap: 42px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    padding: 38px 100px 38px 80px;
+    gap: 37px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 38px 48px;
+    gap: 37px;
+  }
+
+  @media only screen and (max-width: 620px) {
+    padding: 34px 40px;
+    gap: 25px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    padding: 35% 0 0 32px;
+    align-items: flex-start;
+    right: -100%;
+    transition: right .5s ease;
+    gap: 0;
+  }
+}
+
+.sitenav__item {
+  @media only screen and (max-width: $mobile) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .sitenav__link {
-color: var(--text-color);
-letter-spacing: 2.7px;
+  color: var(--text-color);
+  letter-spacing: 2.7px;
+  letter-spacing: 2.3px;
+  position: relative;
+
+  &--active {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      bottom: -41px;
+
+      @media only screen and (max-width: $mobile) {
+        height: 100%;
+        width: 3px;
+        top: 0;
+        left: auto;
+        bottom: auto;
+        right: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 6px 0;
+    display: block;
+    min-width: 100%;
+  }
 }

@@ -45,6 +45,11 @@ body {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
+  transition: font-size .5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 14px;
+  }
 }
 
 /* SCROLL BAR */
