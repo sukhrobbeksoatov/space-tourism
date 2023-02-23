@@ -531,6 +531,7 @@ body {
   letter-spacing: 4.725px;
   text-transform: uppercase;
   margin-bottom: 95px;
+  transition: margin-bottom 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
   .destination__title {
@@ -713,6 +714,11 @@ body {
   display: flex;
   align-items: center;
   gap: 80px;
+}
+@media only screen and (max-width: 992px) {
+  .info-destinatin__travel-distance {
+    justify-content: center;
+  }
 }
 
 .travel-distance-destination {

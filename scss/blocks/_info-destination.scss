@@ -5,6 +5,7 @@
 .destination__title {
   @include for-text(h2);
   margin-bottom: 95px;
+  transition: margin-bottom 0.5s ease;
 
   @media only screen and (max-width: $tablet-l) {
     margin-bottom: 80px;
@@ -30,8 +31,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-transition: padding-left .5s ease;
-  
+  transition: padding-left 0.5s ease;
+
   @media only screen and (max-width: $desktop) {
     padding-left: 54px;
   }
@@ -50,7 +51,7 @@ transition: padding-left .5s ease;
   width: 100%;
   height: auto;
   border-radius: 50%;
-  transition: max-width .5s ease;
+  transition: max-width 0.5s ease;
 
   @media only screen and (max-width: $tablet-l) {
     max-width: 370px;
@@ -148,6 +149,11 @@ transition: padding-left .5s ease;
   display: flex;
   align-items: center;
   gap: 80px;
+
+  
+  @media only screen and (max-width: $tablet-l) {
+    justify-content: center;
+  }
 }
 
 .travel-distance-destination {
