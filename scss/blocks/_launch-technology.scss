@@ -24,6 +24,7 @@
   padding-left: 20%;
   align-items: center;
   justify-content: space-between;
+  transition: padding-left 0.5s ease;
 
   @media only screen and (max-width: $desktop) {
     padding-left: 5%;
@@ -40,6 +41,11 @@
   display: flex;
   align-items: center;
   gap: 80px;
+  transition: gap 0.5s ease;
+
+  @media only screen and (max-width: $desktop) {
+    gap: 60px;
+  }
 
   @media only screen and (max-width: $tablet-l) {
     flex-direction: column;
@@ -51,11 +57,20 @@
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  transition: row-gap 0.5s ease, gap 0.5s ease;
 
   @media only screen and (max-width: $tablet-l) {
     flex-direction: row;
-    gap: 32px;
+    gap: 28px;
     row-gap: 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    gap: 22px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    gap: 16px;
   }
 }
 
