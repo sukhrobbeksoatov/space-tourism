@@ -162,12 +162,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 250px;
+  margin-bottom: 210px;
   transition: margin-bottom 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
   .site-header {
-    margin-bottom: 100px;
+    margin-bottom: 66px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .site-header {
+    margin-bottom: 10px;
   }
 }
 
