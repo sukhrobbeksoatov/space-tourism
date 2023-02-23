@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Bellefair";
   src: url("../fonts/") format("woff2"),
-      url("../fonts/Bellefair-Regular.woff") format("woff");
+    url("../fonts/Bellefair-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,17 @@
 @font-face {
   font-family: "Barlow Condensed";
   src: url("../fonts/BarlowCondensed-Regular.woff2") format("woff2"),
-      url("../fonts/BarlowCondensed-Regular.woff") format("woff");
+    url("../fonts/BarlowCondensed-Regular.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/") format("woff2"),
+    url("../fonts/BarlowCondensed-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

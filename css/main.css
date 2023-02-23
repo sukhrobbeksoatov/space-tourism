@@ -432,6 +432,7 @@ body {
   line-height: 1.1;
   letter-spacing: 2px;
   transition: outline 0.5s ease;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
 }
 .intro__circle-btn:hover {
   outline: 88px solid rgba(255, 255, 255, 0.1);
