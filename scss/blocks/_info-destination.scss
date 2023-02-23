@@ -6,8 +6,17 @@
   @include for-text(h2);
   margin-bottom: 95px;
 
+  @media only screen and (max-width: $tablet-l) {
+    margin-bottom: 80px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
   @media only screen and (max-width: $mobile) {
     text-align: center;
+    margin-bottom: 32px;
   }
 }
 

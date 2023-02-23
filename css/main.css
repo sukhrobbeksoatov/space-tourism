@@ -542,9 +542,20 @@ body {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 992px) {
+  .destination__title {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .destination__title {
+    margin-bottom: 60px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .destination__title {
     text-align: center;
+    margin-bottom: 32px;
   }
 }
 
