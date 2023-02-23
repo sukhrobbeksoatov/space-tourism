@@ -1,0 +1,40 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro__content {
+  max-width: 450px;
+}
+
+.intro__title {
+  @include for-text(h2);
+  margin-bottom: 24px;
+}
+
+.intro__heading {
+  @include for-text(h3, 150px);
+  margin-bottom: 24px;
+}
+
+.intro__description {
+  @include for-text(p)
+}
+
+.intro__circle {
+  --text-color: #000;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}

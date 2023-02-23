@@ -1,12 +1,14 @@
+@import "./mixins";
 @import "./variables";
 @import "./fonts";
 @import "./common";
 @import "./container";
 
 // INDEX
-@import "pages/index.scss";
+@import "pages/index";
+@import "pages/destination";
 
 // BLOCKS
 @import "./blocks/header";
-@import "./blocks/hero";
+@import "./blocks/intro";
 @import "./blocks/footer";

@@ -1,7 +1,8 @@
 /* CUSTOM PROPS */
 :root {
   --primary-bg-color: #fff;
-  --text-color: #000;
+  --text-color: #fff;
+  --lighten: #D0D6F9;
 }
 
 /* GLOBAL */
@@ -37,8 +38,9 @@ img {
 
 body {
   height: 100%;
-  font-family: "Barlow Condensed","Arial", sans-serif;
+  font-family: "Barlow Condensed", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   color: var(--text-color);
   display: flex;
