@@ -2,12 +2,13 @@
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.1;
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
 
   @if $text-type == h2 {
     font-size: 28px;
     letter-spacing: 4.725px;
-    
+    text-transform: uppercase;
+
     @media only screen and (max-width: $tablet) {
       font-size: 20px;
     }
@@ -16,6 +17,7 @@
       font-size: 16px;
     }
   } @else if $text-type == h3 {
+    text-transform: uppercase;
     font-family: "Bellefair", serif;
     font-size: $size;
     @media only screen and (max-width: $mobile) {
@@ -27,9 +29,31 @@
 
       font-size: $size;
     }
+  } @else if $text-type == h4 {
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    
+    @media only screen and (max-width: $tablet) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 16px;
+    }
   } @else if $text-type == p {
     font-size: 18px;
     line-height: 1.8;
+    color: var(--lighten);
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 16px;
+    }
+  } @else if $text-type == span {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
     color: var(--lighten);
 
     @media only screen and (max-width: $tablet) {
