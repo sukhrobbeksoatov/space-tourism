@@ -1,6 +1,6 @@
 /* INDEX BODY */
 .index-body {
-  background: var(--secondary-bg-color) url("../images/index-bg.jpg") no-repeat center / cover;
+  background: var(--secondary-bg-color) url("../images/index-bg.jpg") no-repeat center / cover fixed;
 
 
   @media only screen and (max-width: $tablet) {

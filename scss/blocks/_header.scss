@@ -140,6 +140,10 @@
   position: relative;
 
   &--active {
+    &:hover::after {
+      opacity: 0.5;
+    }
+    
     &::after {
       content: "";
       display: inline-block;
@@ -149,6 +153,7 @@
       position: absolute;
       left: 0;
       bottom: -41px;
+      transition: opacity .5s ease;
 
       @media only screen and (max-width: $tablet) {
         bottom: -40px;

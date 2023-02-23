@@ -133,7 +133,7 @@ body {
 
 /* INDEX BODY */
 .index-body {
-  background: var(--secondary-bg-color) url("../images/index-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/index-bg.jpg") no-repeat center/cover fixed;
 }
 @media only screen and (max-width: 768px) {
   .index-body {
@@ -143,17 +143,17 @@ body {
 
 /* DESTINATION BODY */
 .destination-body {
-  background: var(--secondary-bg-color) url("../images/destination-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/destination-bg.jpg") no-repeat center/cover fixed;
 }
 
 /* INDEX BODY */
 .crew-body {
-  background: var(--secondary-bg-color) url("../images/crew-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/crew-bg.jpg") no-repeat center/cover fixed;
 }
 
 /* INDEX BODY */
 .technology-body {
-  background: var(--secondary-bg-color) url("../images/technology-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/technology-bg.jpg") no-repeat center/cover fixed;
 }
 
 .site-header {
@@ -294,6 +294,9 @@ body {
   letter-spacing: 2.3px;
   position: relative;
 }
+.sitenav__link--active:hover::after {
+  opacity: 0.5;
+}
 .sitenav__link--active::after {
   content: "";
   display: inline-block;
@@ -303,6 +306,7 @@ body {
   position: absolute;
   left: 0;
   bottom: -41px;
+  transition: opacity 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
   .sitenav__link--active::after {
@@ -336,14 +340,9 @@ body {
 @media only screen and (max-width: 992px) {
   .intro {
     align-items: center;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .intro {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 156px;
+    gap: 120px;
   }
 }
 
@@ -411,13 +410,16 @@ body {
   }
 }
 
-.intro__circle {
+.intro__circle-btn {
+  border: none;
+  cursor: pointer;
   --text-color: #000;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   width: 274px;
   height: 274px;
   border-radius: 50%;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,21 +428,35 @@ body {
   font-size: 32px;
   line-height: 1.1;
   letter-spacing: 2px;
+  transition: outline 0.5s ease;
+}
+.intro__circle-btn:hover {
+  outline: 88px solid rgba(255, 255, 255, 0.1);
+}
+@media only screen and (max-width: 768px) {
+  .intro__circle-btn:hover {
+    outline-width: 66px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .intro__circle-btn:hover {
+    outline-width: 44px;
+  }
 }
 @media only screen and (max-width: 992px) {
-  .intro__circle {
+  .intro__circle-btn {
     width: 250px;
     height: 250px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .intro__circle {
+  .intro__circle-btn {
     width: 242px;
     height: 242px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .intro__circle {
+  .intro__circle-btn {
     width: 150px;
     height: 150px;
     font-size: 20px;
