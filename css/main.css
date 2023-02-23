@@ -625,11 +625,23 @@ body {
   gap: 35px;
   letter-spacing: 2.7px;
   padding: 12px 0;
-  margin-bottom: 3 7px;
+  margin-bottom: 37px;
 }
 @media only screen and (max-width: 992px) {
   .info-destination__list {
     justify-content: center;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .info-destination__list {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .info-destination__list {
+    margin-bottom: 20px;
   }
 }
 
