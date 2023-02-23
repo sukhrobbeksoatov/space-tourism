@@ -519,7 +519,7 @@ body {
 }
 
 .info-destination {
-  padding-top: 36px;
+  padding: 36px 0 50px;
 }
 
 .destination__title {
@@ -558,6 +558,12 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  transition: padding-left 0.5s ease;
+}
+@media only screen and (max-width: 1240px) {
+  .info-destination__inner {
+    padding-left: 54px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .info-destination__inner {
@@ -575,6 +581,11 @@ body {
   height: auto;
   border-radius: 50%;
   transition: max-width 0.5s ease;
+}
+@media only screen and (max-width: 992px) {
+  .info-destination__img {
+    max-width: 370px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .info-destination__img {
