@@ -25,6 +25,14 @@ function destinationItemClick(evt) {
 
   if (!el) return;
 
+  el.classList.add("info-destination__item--active");
+
+  const els = document.querySelectorAll(
+    `[data-dest-item].info-destination__item--active`
+  );
+  els.forEach((el) => el.classList.remove("info-destination__item--active"));
+  el.classList.add("info-destination__item--active");
+
   data.destinations.forEach((planet) => {
     if (el.innerText.toLowerCase() === planet.name.toLowerCase()) {
       elDestImg.src = planet.images.png;
