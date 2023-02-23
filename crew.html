@@ -60,7 +60,65 @@
     </header>
     <!-- /HEADER -->
 
+    <!-- MAIN -->
+    <main class="main-content">
+      <!-- CREW INFO -->
+      <section class="crew-info">
+        <div class="container">
+          <h2 class="crew-info__title">
+            <span class="crew-info__title-inner">02</span> Meet your crew
+          </h2>
+
+          <div class="crew-info__inner">
+            <div class="crew-info__content">
+              <h2 class="crew-info__heading" data-crew-heading>Commander</h2>
+              <h3 class="crew-info__name" data-crew-name>Douglas Hurley</h3>
+              <p class="crew-info__desc" data-crew-desc>
+                Douglas Gerald Hurley is an American engineer, former Marine
+                Corps pilot and former NASA astronaut. He launched into space
+                for the third time as commander of Crew Dragon Demo-2.
+              </p>
+
+              <ul class="crew-info__pagination-list pagination-list">
+                <li
+                  class="pagination-list__item pagination-list__item--active"
+                  data-crew-pagination="Douglas Hurley"
+                ></li>
+                <li
+                  class="pagination-list__item"
+                  data-crew-pagination="Mark Shuttleworth"
+                ></li>
+                <li
+                  class="pagination-list__item"
+                  data-crew-pagination="Victor Glover"
+                ></li>
+                <li
+                  class="pagination-list__item"
+                  data-crew-pagination="Anousheh Ansari"
+                ></li>
+              </ul>
+            </div>
+            <img
+              class="crew-info__img"
+              src="images/douglas-hurley.png"
+              alt="Douglas Hurley"
+              width="568"
+              height="712"
+              srcset="
+                images/douglas-hurley.png    1x,
+                images/douglas-hurley@2x.png 2x
+              " data-crew-img
+            />
+          </div>
+        </div>
+      </section>
+      <!-- /CREW INFO -->
+    </main>
+    <!-- /MAIN -->
+
     <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/crew.js"></script>
   </body>
 </html>

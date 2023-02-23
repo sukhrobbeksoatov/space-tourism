@@ -1,0 +1,129 @@
+.crew-info {
+  padding: 72px 0 0;
+  height: 100%;
+
+  .container {
+    position: relative;
+  }
+}
+
+.crew-info__title {
+  @include for-text(h2);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &-inner {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    position: static;
+    text-align: center;
+  }
+}
+
+.crew-info__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $tablet-l) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.crew-info__img {
+  max-width: 100%;
+  min-height: 500px;
+
+  @media only screen and (max-width: $tablet-l) {
+    min-height: auto;
+    height: auto;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    max-width: 420px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    max-width: 300px;
+  }
+}
+
+.crew-info__content {
+  padding: 100px 0;
+
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 500px;
+  }
+}
+
+.crew-info__heading {
+  @include text-format(small);
+  margin-bottom: 15px;
+}
+
+.crew-info__name {
+  @include text-format(big);
+  margin-bottom: 27px;
+  white-space: nowrap;
+
+  @media only screen and (max-width: $tablet-l) {
+    white-space: normal;
+  }
+}
+
+.crew-info__desc {
+  max-width: 444px;
+  @include for-text(p);
+  margin-bottom: 120px;
+  min-height: 132px;
+
+  @media only screen and (max-width: $tablet-l) {
+    max-width: none;
+    min-height: auto;
+    margin-bottom: 70px;
+  }
+}
+
+/* PAGINATION LIST */
+.pagination-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media only screen and (max-width: $tablet-l) {
+    justify-content: center;
+  }
+}
+
+.pagination-list__item {
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-bg-color);
+  opacity: 0.17;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.5s ease, width 0.5s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--active {
+    opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    width: 13px;
+    height: 13px;
+  }
+}
