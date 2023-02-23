@@ -345,6 +345,9 @@ body {
     gap: 120px;
   }
 }
+.intro *:focus {
+  outline-offset: 0;
+}
 
 .intro__content {
   max-width: 450px;
