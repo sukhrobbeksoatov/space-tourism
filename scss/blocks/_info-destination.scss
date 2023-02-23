@@ -36,6 +36,11 @@
   width: 100%;
   height: auto;
   border-radius: 50%;
+  transition: max-width .5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    max-width: 300px;
+  }
 
   @media only screen and (max-width: $mobile) {
     max-width: 200px;
