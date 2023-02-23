@@ -13,6 +13,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/") format("woff2"), url("../fonts/BarlowCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 /* CUSTOM PROPS */
 :root {
   --primary-bg-color: #fff;
@@ -182,6 +189,7 @@ body {
   left: 5%;
 }
 .logo__link {
+  border-radius: 50%;
   display: flex;
 }
 .logo__img {
@@ -294,6 +302,39 @@ body {
   letter-spacing: 2.3px;
   position: relative;
 }
+.sitenav__link-inner {
+  font-weight: 700;
+}
+.sitenav__link::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  bottom: -41px;
+  transition: opacity 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  .sitenav__link::after {
+    bottom: -40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .sitenav__link::after {
+    height: 100%;
+    width: 3px;
+    top: 0;
+    left: auto;
+    bottom: auto;
+    right: 0;
+  }
+}
+.sitenav__link:hover::after {
+  opacity: 0.5;
+}
 .sitenav__link--active:hover::after {
   opacity: 0.5;
 }
@@ -305,6 +346,7 @@ body {
   background-color: #fff;
   position: absolute;
   left: 0;
+  opacity: 1;
   bottom: -41px;
   transition: opacity 0.5s ease;
 }
@@ -432,7 +474,7 @@ body {
   line-height: 1.1;
   letter-spacing: 2px;
   transition: outline 0.5s ease;
-  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 0px solid rgba(255, 255, 255, 0.1);
 }
 .intro__circle-btn:hover {
   outline: 88px solid rgba(255, 255, 255, 0.1);

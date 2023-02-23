@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 210px;
-  transition: margin-bottom .5s ease, padd;
-  
+  transition: margin-bottom 0.5s ease, padd;
+
   @media only screen and (max-width: $tablet) {
     padding: 24px 0;
     margin-bottom: 76px;
@@ -20,8 +20,9 @@
 .logo {
   position: relative;
   left: 5%;
-
+  
   &__link {
+    border-radius: 50%;
     display: flex;
   }
 
@@ -44,7 +45,6 @@
   display: none;
 
   &.opened {
-    
     .sitenav-toggler__line {
       &:first-child {
         position: relative;
@@ -69,12 +69,12 @@
       }
     }
   }
-  
+
   &__line {
     width: 24px;
     height: 3px;
     background-color: var(--primary-bg-color);
-    transition: transform .5s ease, position .5s ease, opacity .5s ease;
+    transition: transform 0.5s ease, position 0.5s ease, opacity 0.5s ease;
   }
 
   @media only screen and (max-width: $mobile) {
@@ -89,13 +89,13 @@
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
   padding: 38px 255px 38px 143px;
-  transition: padding .5s ease, gap .5s ease;
+  transition: padding 0.5s ease, gap 0.5s ease;
 
   @media only screen and (max-width: $desktop) {
     padding: 38px 200px 38px 120px;
     gap: 42px;
   }
-  
+
   @media only screen and (max-width: $tablet-l) {
     padding: 38px 100px 38px 80px;
     gap: 37px;
@@ -121,7 +121,7 @@
     padding: 35% 0 0 32px;
     align-items: flex-start;
     right: -100%;
-    transition: right .5s ease;
+    transition: right 0.5s ease;
     gap: 0;
   }
 }
@@ -139,11 +139,48 @@
   letter-spacing: 2.3px;
   position: relative;
 
+  &-inner {
+    font-weight: 700;
+  }
+
+  &::after {
+    content: "";
+    display:inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    bottom: -41px;
+    transition: opacity 0.5s ease;
+
+    @media only screen and (max-width: $tablet) {
+      bottom: -40px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      height: 100%;
+      width: 3px;
+      top: 0;
+      left: auto;
+      bottom: auto;
+      right: 0;
+    }
+  } 
+  
+
+  &:hover {
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
   &--active {
     &:hover::after {
       opacity: 0.5;
     }
-    
+
     &::after {
       content: "";
       display: inline-block;
@@ -152,8 +189,9 @@
       background-color: #fff;
       position: absolute;
       left: 0;
+      opacity: 1;
       bottom: -41px;
-      transition: opacity .5s ease;
+      transition: opacity 0.5s ease;
 
       @media only screen and (max-width: $tablet) {
         bottom: -40px;
