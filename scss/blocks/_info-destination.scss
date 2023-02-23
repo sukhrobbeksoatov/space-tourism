@@ -5,6 +5,10 @@
 .destination__title {
   @include for-text(h2);
   margin-bottom: 95px;
+
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+  }
 }
 
 .destination__title-inner {
@@ -32,6 +36,10 @@
   width: 100%;
   height: auto;
   border-radius: 50%;
+
+  @media only screen and (max-width: $mobile) {
+    max-width: 200px;
+  }
 }
 
 .info-destination__content {
