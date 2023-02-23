@@ -254,7 +254,7 @@ body {
 }
 @media only screen and (max-width: 620px) {
   .sitenav__list {
-    padding: 34px 40px;
+    padding: 38px 40px;
     gap: 25px;
   }
 }
@@ -296,6 +296,11 @@ body {
   position: absolute;
   left: 0;
   bottom: -41px;
+}
+@media only screen and (max-width: 768px) {
+  .sitenav__link--active::after {
+    bottom: -40px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .sitenav__link--active::after {

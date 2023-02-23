@@ -102,7 +102,7 @@
   }
 
   @media only screen and (max-width: 620px) {
-    padding: 34px 40px;
+    padding: 38px 40px;
     gap: 25px;
   }
 
@@ -144,6 +144,10 @@
       position: absolute;
       left: 0;
       bottom: -41px;
+
+      @media only screen and (max-width: $tablet) {
+        bottom: -40px;
+      }
 
       @media only screen and (max-width: $mobile) {
         height: 100%;
