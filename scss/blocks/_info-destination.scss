@@ -17,6 +17,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  @media only screen and (max-width: $tablet-l) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+    padding-left: 0;
+  }
 }
 
 .info-destination__img {
@@ -28,6 +36,10 @@
 
 .info-destination__content {
   max-width: 445px;
+
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 600px;
+  }
 }
 
 .info-destination__list {
@@ -37,12 +49,17 @@
   letter-spacing: 2.7px;
   padding: 12px 0;
   margin-bottom: 3 7px;
+
+  @media only screen and (max-width: $tablet-l) {
+    justify-content: center;
+  }
 }
 
 .info-destination__item {
   cursor: pointer;
   color: var(--lighten);
   position: relative;
+  user-select: none;
 
   &::after {
     content: "";
@@ -89,6 +106,11 @@
 .info-destination__desc {
   @include for-text(p);
   margin-bottom: 54px;
+  min-height: 130px;
+
+  @media only screen and (max-width: $tablet-l) {
+    min-width: none;
+  }
 }
 
 .info-destinatin__travel-distance {

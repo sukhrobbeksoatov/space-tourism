@@ -72,41 +72,72 @@
             destination
           </h2>
         </div>
-        <div class="info-destination__inner container">
-          <img
-            class="info-destination__img"
-            src="images/moon.png"
-            alt="Moon"
-            width="445"
-            height="445"
-            srcset="images/moon.png 1x, images/moon@2x.png 2x"
-          />
-          <div class="info-destination__content">
-            <ul class="info-destination__list">
-              <li class="info-destination__item info-destination__item--active" value="MOON">MOON</li>
-              <li class="info-destination__item" value="MARS">MARS</li>
-              <li class="info-destination__item" value="EUROPA">EUROPA</li>
-              <li class="info-destination__item" value="TITAN">TITAN</li>
-            </ul>
-            <h3 class="info-destination__heading">MOON</h3>
-            <p class="info-destination__desc">
-              See our planet as you’ve never seen it before. A perfect relaxing
-              trip away to help regain perspective and come back refreshed.
-              While you’re there, take in some history by visiting the Luna 2
-              and Apollo 11 landing sites.
-            </p>
-            <div
-              class="info-destinatin__travel-distance travel-distance-destination"
-            >
-              <div class="travel-distance-destination__inner">
-                <p class="travel-distance-destination__title">AVG. DISTANCE</p>
-                <p class="travel-distance-destination__subtitle">384,400 km</p>
-              </div>
-              <div class="travel-distance-destination__inner">
-                <p class="travel-distance-destination__title">
-                  Est. travel time
-                </p>
-                <p class="travel-distance-destination__subtitle">3 days</p>
+        <div class="container">
+          <div class="info-destination__inner">
+            <img
+              class="info-destination__img"
+              src="images/moon.png"
+              alt="Moon"
+              width="445"
+              height="445"
+              srcset="images/moon.png 1x, images/moon@2x.png 2x"
+              data-dest-img
+            />
+            <div class="info-destination__content">
+              <ul class="info-destination__list">
+                <li
+                  class="info-destination__item info-destination__item--active"
+                  value="MOON"
+                  data-dest-item
+                >
+                  MOON
+                </li>
+                <li class="info-destination__item" value="MARS" data-dest-item>
+                  MARS
+                </li>
+                <li
+                  class="info-destination__item"
+                  value="EUROPA"
+                  data-dest-item
+                >
+                  EUROPA
+                </li>
+                <li class="info-destination__item" value="TITAN" data-dest-item>
+                  TITAN
+                </li>
+              </ul>
+              <h3 class="info-destination__heading" data-dest-heading>MOON</h3>
+              <p class="info-destination__desc" data-dest-desc>
+                See our planet as you’ve never seen it before. A perfect
+                relaxing trip away to help regain perspective and come back
+                refreshed. While you’re there, take in some history by visiting
+                the Luna 2 and Apollo 11 landing sites.
+              </p>
+              <div
+                class="info-destinatin__travel-distance travel-distance-destination"
+              >
+                <div class="travel-distance-destination__inner">
+                  <p class="travel-distance-destination__title">
+                    AVG. DISTANCE
+                  </p>
+                  <p
+                    class="travel-distance-destination__subtitle"
+                    data-dest-distance
+                  >
+                    384,400 km
+                  </p>
+                </div>
+                <div class="travel-distance-destination__inner">
+                  <p class="travel-distance-destination__title">
+                    Est. travel time
+                  </p>
+                  <p
+                    class="travel-distance-destination__subtitle"
+                    data-dest-time
+                  >
+                    3 days
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -117,6 +148,7 @@
     <!-- /MAIN -->
 
     <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
