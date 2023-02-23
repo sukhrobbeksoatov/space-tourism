@@ -59,7 +59,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--text-color);
-  background-color: var(--secondary-bg-color);
   display: flex;
   flex-direction: column;
   transition: font-size 0.5s ease;
@@ -134,7 +133,7 @@ body {
 
 /* INDEX BODY */
 .index-body {
-  background: url("../images/index-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/index-bg.jpg") no-repeat center/cover;
 }
 @media only screen and (max-width: 768px) {
   .index-body {
@@ -144,17 +143,17 @@ body {
 
 /* DESTINATION BODY */
 .destination-body {
-  background: url("../images/destination-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/destination-bg.jpg") no-repeat center/cover;
 }
 
 /* INDEX BODY */
 .crew-body {
-  background: url("../images/crew-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/crew-bg.jpg") no-repeat center/cover;
 }
 
 /* INDEX BODY */
 .technology-body {
-  background: url("../images/technology-bg.jpg") no-repeat center/cover;
+  background: var(--secondary-bg-color) url("../images/technology-bg.jpg") no-repeat center/cover;
 }
 
 .site-header {

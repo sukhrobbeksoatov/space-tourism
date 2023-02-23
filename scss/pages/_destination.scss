@@ -1,4 +1,4 @@
 /* DESTINATION BODY */
 .destination-body {
-  background: url("../images/destination-bg.jpg") no-repeat center / cover;
+  background: var(--secondary-bg-color) url("../images/destination-bg.jpg") no-repeat center / cover;
 }
