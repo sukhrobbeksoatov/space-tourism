@@ -13,11 +13,15 @@ const elCrewName = document.querySelector("[data-crew-name]");
 const elCrewDesc = document.querySelector("[data-crew-desc]");
 const elCrewImg = document.querySelector("[data-crew-img]");
 
+// Technology
+const elTechnologyImg = document.querySelector(".launch-technology__img");
+
 // event delegation
 document.addEventListener("click", (evt) => {
   siteNavToggleClick(evt);
   destinationItemClick(evt);
   crewPaginationItemClick(evt);
+  technologyNavListItemClick(evt);
 });
 
 // Sitenav toggle click
@@ -79,3 +83,35 @@ function crewPaginationItemClick(evt) {
     }
   });
 }
+
+// Technology navlist item click
+function technologyNavListItemClick(evt) {
+  const el = evt.target.closest("[data-technology-list-item]");
+
+  if (!el) return;
+
+  data.technology.forEach((technology) => {
+    if (el.dataset.technologyListItem === technology.name) {
+      elTechnologyImg.dataset.launchImg = technology.name;
+      if (window.innerWidth < 992) {
+        elTechnologyImg.src = technology.images.landscape;
+        elTechnologyImg.srcset = `${technology.images.landscape} 1x, ${technology.images.landscape2x} 2x`;
+      } else {
+        elTechnologyImg.src = technology.images.portrait;
+        elTechnologyImg.srcset = `${technology.images.portrait} 1x, ${technology.images.portrait2x} 2x`;
+      }
+    }
+  });
+}
+
+data.technology.forEach((technology) => {
+  if (elTechnologyImg.dataset.launchImg === technology.name) {
+    if (window.innerWidth < 992) {
+      elTechnologyImg.src = technology.images.landscape;
+      elTechnologyImg.srcset = `${technology.images.landscape} 1x, ${technology.images.landscape2x} 2x`;
+    } else {
+      elTechnologyImg.src = technology.images.portrait;
+      elTechnologyImg.srcset = `${technology.images.portrait} 1x, ${technology.images.portrait2x} 2x`;
+    }
+  }
+});

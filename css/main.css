@@ -981,7 +981,12 @@ body {
   }
 }
 
+.launch-technology {
+  padding: 76px 0 0;
+}
+
 .launch-technology__title {
+  padding-left: 20%;
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.1;
@@ -989,7 +994,7 @@ body {
   font-size: 28px;
   letter-spacing: 4.725px;
   text-transform: uppercase;
-  margin-bottom: 135px;
+  margin-bottom: 26px;
 }
 @media only screen and (max-width: 768px) {
   .launch-technology__title {
@@ -1005,7 +1010,178 @@ body {
   font-weight: 700;
   opacity: 0.25;
 }
+@media only screen and (max-width: 576px) {
+  .launch-technology__title {
+    text-align: center;
+    padding-left: 0;
+  }
+}
 
 .launch-technology__inner {
   display: flex;
+  gap: 30px;
+  padding-left: 20%;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1240px) {
+  .launch-technology__inner {
+    padding-left: 5%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .launch-technology__inner {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.launch-technology__left {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+@media only screen and (max-width: 992px) {
+  .launch-technology__left {
+    flex-direction: column;
+  }
+}
+
+/* NAVLIST */
+.navlist-technology {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+@media only screen and (max-width: 992px) {
+  .navlist-technology {
+    flex-direction: row;
+    gap: 32px;
+    row-gap: 0;
+  }
+}
+
+.navlist-technology__item {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.2;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  transition: font-size 0.5s ease;
+  font-size: 32px;
+  opacity: 0.5;
+  opacity: 1;
+  line-height: 80px;
+  transition: border-color 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+@media only screen and (max-width: 992px) {
+  .navlist-technology__item {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navlist-technology__item {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navlist-technology__item {
+    font-size: 16px;
+  }
+}
+.navlist-technology__item:hover {
+  border-color: rgb(255, 255, 255);
+}
+.navlist-technology__item--active {
+  color: #000;
+  background-color: var(--primary-bg-color);
+}
+@media only screen and (max-width: 992px) {
+  .navlist-technology__item {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navlist-technology__item {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navlist-technology__item {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.launch-technology__subtitle {
+  color: var(--lighten);
+  letter-spacing: 2.7px;
+  margin-bottom: 11px;
+}
+
+.launch-technology__heading {
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.2;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  transition: font-size 0.5s ease;
+  font-size: 56px;
+  margin-bottom: 17px;
+}
+@media only screen and (max-width: 992px) {
+  .launch-technology__heading {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .launch-technology__heading {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .launch-technology__heading {
+    font-size: 24px;
+  }
+}
+
+.launch-technology__desc {
+  max-width: 445px;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.1;
+  transition: font-size 0.5s ease;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--lighten);
+}
+@media only screen and (max-width: 768px) {
+  .launch-technology__desc {
+    font-size: 16px;
+  }
+}
+
+.launch-technology__img {
+  max-width: 515px;
+  width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 992px) {
+  .launch-technology__img {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
