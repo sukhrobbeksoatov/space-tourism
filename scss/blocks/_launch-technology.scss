@@ -24,7 +24,7 @@
   padding-left: 20%;
   align-items: center;
   justify-content: space-between;
-  transition: padding-left 0.5s ease;
+  transition: padding 0.5s ease;
 
   @media only screen and (max-width: $desktop) {
     padding-left: 5%;
@@ -34,6 +34,10 @@
     flex-direction: column-reverse;
     padding-left: 0;
     text-align: center;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 0 20px;
   }
 }
 
