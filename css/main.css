@@ -979,4 +979,33 @@ body {
     width: 13px;
     height: 13px;
   }
+}
+
+.launch-technology__title {
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.1;
+  transition: font-size 0.5s ease;
+  font-size: 28px;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+  margin-bottom: 135px;
+}
+@media only screen and (max-width: 768px) {
+  .launch-technology__title {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .launch-technology__title {
+    font-size: 16px;
+  }
+}
+.launch-technology__title-inner {
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.launch-technology__inner {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

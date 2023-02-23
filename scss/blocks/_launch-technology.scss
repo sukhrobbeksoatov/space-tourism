@@ -1,0 +1,37 @@
+.launch-technology {
+}
+
+.launch-technology__title {
+  @include for-text(h2);
+  margin-bottom: 135px;
+
+  &-inner {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+}
+
+.launch-technology__inner {
+  display: flex;
+}
+
+.launch-technology__list {
+}
+
+.navlist-technology {
+}
+
+.navlist-technology__item {
+}
+
+.launch-technology__content {
+}
+
+.launch-technology__subtitle {
+}
+
+.launch-technology__heading {
+}
+
+.launch-technology__desc {
+}
