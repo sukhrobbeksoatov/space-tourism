@@ -15,38 +15,8 @@ const elCrewImg = document.querySelector("[data-crew-img]");
 
 // Technology
 const elTechnologyImg = document.querySelector(".launch-technology__img");
-
-// Load event
-window.addEventListener("load", () => {
-  data.technology.forEach((technology) => {
-    if (elTechnologyImg.dataset.launchImg === technology.name) {
-      if (window.innerWidth < 992) {
-        elTechnologyImg.src = technology.images.landscape;
-        elTechnologyImg.srcset = `${technology.images.landscape} 1x, ${technology.images.landscape2x} 2x`;
-        return;
-      } else {
-        elTechnologyImg.src = technology.images.portrait;
-        elTechnologyImg.srcset = `${technology.images.portrait} 1x, ${technology.images.portrait2x} 2x`;
-        return;
-      }
-    }
-  });
-});
-
-// Resize event
-window.addEventListener("resize", () => {
-  data.technology.forEach((technology) => {
-    if (elTechnologyImg.dataset.launchImg === technology.name) {
-      if (window.innerWidth < 992) {
-        elTechnologyImg.src = technology.images.landscape;
-        elTechnologyImg.srcset = `${technology.images.landscape} 1x, ${technology.images.landscape2x} 2x`;
-      } else {
-        elTechnologyImg.src = technology.images.portrait;
-        elTechnologyImg.srcset = `${technology.images.portrait} 1x, ${technology.images.portrait2x} 2x`;
-      }
-    }
-  });
-});
+const elTechnologyHeading = document.querySelector("[data-technology-heading]");
+const elTechnologyDesc = document.querySelector("[data-technology-desc]");
 
 // event delegation
 document.addEventListener("click", (evt) => {
@@ -132,6 +102,9 @@ function technologyNavListItemClick(evt) {
 
   data.technology.forEach((technology) => {
     if (el.dataset.technologyListItem === technology.name) {
+      elTechnologyHeading.textContent = technology.name
+      elTechnologyDesc.textContent = technology.description
+      
       if (window.innerWidth < 992) {
         elTechnologyImg.src = technology.images.landscape;
         elTechnologyImg.srcset = `${technology.images.landscape} 1x, ${technology.images.landscape2x} 2x`;

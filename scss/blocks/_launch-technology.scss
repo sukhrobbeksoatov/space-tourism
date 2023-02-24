@@ -1,5 +1,18 @@
 .launch-technology {
-  padding: 76px 0 0;
+  padding: 36px 0 0;
+  transition: padding 0.5s ease;
+
+  @media only screen and (max-width: $tablet-l) {
+    padding: 15px 0 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 10px 0 0;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 0;
+  }
 }
 
 .launch-technology__title {
