@@ -58,20 +58,30 @@
   }
 }
 
+.crew-info__img-wrapper {
+  @media only screen and (max-width: $mobile) {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
 .crew-info__img {
   max-width: 100%;
-
-  @media only screen and (max-width: $tablet-l) {
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
 
   @media only screen and (max-width: $tablet) {
     max-width: 420px;
   }
 
   @media only screen and (max-width: $mobile) {
-    max-width: 400px;
-    border-bottom: 1px solid var(--border-color);
+    max-width: 300px;
   }
 }
 

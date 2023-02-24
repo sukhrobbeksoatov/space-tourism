@@ -7,7 +7,7 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    padding: 20px 30px;
+    padding: 20px 0 30px;
   }
 }
 
@@ -87,7 +87,7 @@
   max-width: 445px;
 
   @media only screen and (max-width: $tablet-l) {
-    max-width: 600px;
+    max-width: none;
   }
 }
 
@@ -205,13 +205,6 @@
 .travel-distance-destination {
   border-top: 1px solid #383b4b;
   padding-top: 28px;
-
-  // @media only screen and (max-width: $tablet) {
-  //   margin-bottom: 60px;
-  // }
-}
-
-.travel-distance-destination__inner {
 }
 
 .travel-distance-destination__title {
