@@ -727,7 +727,7 @@ body {
   line-height: 1.8;
   color: var(--lighten);
   margin-bottom: 54px;
-  min-height: 100px;
+  min-height: 130px;
 }
 @media only screen and (max-width: 768px) {
   .info-destination__desc {
@@ -736,7 +736,7 @@ body {
 }
 @media only screen and (max-width: 992px) {
   .info-destination__desc {
-    min-width: none;
+    min-height: auto;
     margin-bottom: 80px;
   }
 }
