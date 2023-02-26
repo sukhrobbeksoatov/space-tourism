@@ -75,6 +75,11 @@
   max-width: 100%;
   width: 100%;
   height: auto;
+  transition: transform .5s ease;
+
+  &:hover {
+    transform: translate(0, -20px);
+  }
 
   @media only screen and (max-width: $tablet) {
     max-width: 420px;
